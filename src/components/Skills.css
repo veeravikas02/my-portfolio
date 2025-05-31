@@ -1,0 +1,262 @@
+/* src/components/Skills.css */
+
+.skills-section {
+  background-color: #ffffff; /* White background for the skills section */
+  padding: 60px 0; /* Consistent top/bottom padding, 0 horizontal for full background */
+  color: #333;
+  min-height: auto;
+}
+
+.skills-container {
+  width: 100%;
+  max-width: 1200px; /* Consistent max-width with About section */
+  margin: 0 auto; /* Center the container */
+  padding: 0 5%; /* Consistent horizontal padding inside the container */
+  display: flex;
+  flex-direction: column; /* Stack content vertically within the container */
+  align-items: flex-start; /* Align items to the left by default for main content blocks */
+}
+
+/* Re-using the heading-box class for consistency */
+.heading-box {
+  border: 2px solid #00bfff; /* Light blue border */
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #f0f8ff; /* Lightest blue background */
+  display: inline-block; /* Makes the box wrap around the text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  margin-bottom: 30px; /* Spacing below the heading box */
+  align-self: center; /* IMPORTANT: Ensures the heading box is centered within the flex container */
+  text-align: center; /* Ensures text inside the heading box is centered */
+}
+
+/* Specific margin for additional skills and tools headings if needed */
+.additional-skills-heading,
+.tools-heading {
+  margin-top: 40px; /* Add some space above these headings */
+}
+
+
+.main-skills-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap onto the next line */
+  justify-content: flex-start; /* Align items to the start */
+  gap: 30px; /* Space between skill cards */
+  width: 100%; /* Take full width of the container */
+}
+
+.skill-card {
+  background-color: #e0f2f7; /* Light blue background for cards */
+  border: 1px solid #00bfff; /* Light blue border */
+  border-radius: 8px;
+  padding: 25px;
+  flex: 1; /* Allows cards to grow and shrink */
+  min-width: 280px; /* Minimum width before wrapping */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content within the card */
+  text-align: center; /* Center text within the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+  font-size: 3rem; /* Size of the icon */
+  color: #001f4d; /* Navy blue color */
+  margin-bottom: 15px;
+}
+
+.skill-card h3 {
+  font-size: 1.5rem;
+  color: #001f4d;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #a7d9ed; /* Underline effect */
+  padding-bottom: 8px;
+  width: 80%; /* Make underline fit the text better */
+}
+
+.skill-card ul {
+  list-style: none; /* Remove default list bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 8px;
+  display: flex; /* Make list items flex to align icon/image and text */
+  align-items: center; /* Vertically center icon/image and text */
+  gap: 10px; /* Space between icon/image and text */
+}
+
+.tech-icon { /* Style for Font Awesome icons */
+  font-size: 1.3rem; /* Size of the tech-specific icons */
+  color: #001f4d; /* Consistent color with other icons */
+}
+
+.tech-image { /* NEW STYLE FOR IMAGE LOGOS */
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+  object-fit: contain; /* Ensure image scales properly */
+}
+
+
+.additional-skills-content {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Stack ML/AI items */
+  gap: 20px;
+}
+
+.additional-skill-item {
+  background-color: #f0f8ff; /* Lightest blue background for additional skills */
+  border: 1px dashed #00bfff; /* Dashed light blue border */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.additional-skill-item h4 {
+  font-size: 1.3rem;
+  color: #001f4d;
+  margin-bottom: 10px;
+}
+
+.additional-skill-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.tools-icons {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center tools icons */
+  gap: 40px; /* Space between tool items */
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #001f4d; /* Navy blue for tool names */
+}
+
+.tool-icon { /* Style for Font Awesome tool icons */
+  font-size: 3.5rem; /* Larger icons for tools */
+  margin-bottom: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.tool-item:hover .tool-icon {
+  color: #00bfff; /* Light blue on hover */
+  transform: translateY(-5px);
+}
+
+.tool-item p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.tool-image { /* NEW STYLE FOR TOOL IMAGE LOGOS */
+  width: 48px; /* Adjust size as needed, larger than tech-image */
+  height: 48px; /* Adjust size as needed */
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.tool-item:hover .tool-image {
+  transform: translateY(-5px); /* Lift effect on hover for images */
+}
+
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .main-skills-grid {
+    flex-direction: column; /* Stack skill cards vertically */
+    align-items: center; /* Center stacked cards */
+  }
+
+  .skill-card {
+    min-width: unset; /* Remove min-width to allow full width within container */
+    width: 90%; /* Take up most of the width */
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 40px 0;
+  }
+  .skills-container {
+    padding: 0 2.5%; /* Adjust horizontal padding for smaller screens */
+  }
+  .skill-card {
+    padding: 20px;
+  }
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+  .skill-card h3 {
+    font-size: 1.3rem;
+  }
+  .skill-card li {
+    font-size: 1rem;
+  }
+  .tech-image { /* Adjust for smaller screens */
+    width: 20px;
+    height: 20px;
+  }
+  .additional-skill-item {
+    padding: 15px;
+  }
+  .additional-skill-item h4 {
+    font-size: 1.2rem;
+  }
+  .additional-skill-item p {
+    font-size: 0.95rem;
+  }
+  .tool-icon {
+    font-size: 3rem;
+  }
+  .tool-item p {
+    font-size: 1rem;
+  }
+  .tool-image { /* Adjust for smaller screens */
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    padding: 0 1%; /* Even less padding on very small screens */
+  }
+  .skill-card {
+    width: 100%; /* Full width on very small screens */
+  }
+  .heading-box {
+    font-size: 1.8rem;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+  }
+  .tool-icon {
+    font-size: 2.5rem;
+  }
+  .tools-icons {
+    gap: 25px;
+  }
+  .tool-image { /* Adjust for very small screens */
+    width: 35px;
+    height: 35px;
+  }
+}

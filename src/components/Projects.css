@@ -1,0 +1,228 @@
+/* src/components/Projects.css */
+
+.projects-section {
+  background-color: #f8f8f8; /* Light grey background */
+  padding: 60px 0;
+  color: #333;
+}
+
+.projects-container {
+  width: 90%; /* Use a percentage width to make it more flexible */
+  /* Removed max-width to allow it to expand more on large screens */
+  margin: 0 auto; /* Center the container on the page */
+  padding: 0; /* Removing padding here, letting grid gap handle internal spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align contents to the left by default */
+}
+
+/* Reusing heading-box from Skills.css */
+.projects-container .heading-box {
+  border: 2px solid #00bfff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Specific styling for the projects heading for left alignment on large screens */
+.projects-heading {
+  align-self: flex-start; /* Aligns heading to the left */
+  margin-left: 0; /* Ensures no extra margin pushes it right */
+}
+
+.projects-grid {
+  display: grid;
+  /* Explicitly define 4 equal columns. Each 1fr takes an equal fraction of available space. */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* Slightly reduced gap between items for a tighter fit */
+  width: 100%; /* Ensures the grid takes full width of its container */
+}
+
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 320px; /* Minimum height for consistent card size */
+  overflow: hidden; /* Helps prevent content from spilling if text is too long */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  font-size: 1.6rem;
+  color: #001f4d;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #a7d9ed;
+  padding-bottom: 5px;
+}
+
+.project-year {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: normal;
+  display: block;
+  margin-top: 5px;
+}
+
+.project-description-list {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Allows the description to take available vertical space */
+}
+
+.project-description-list li {
+  margin-bottom: 5px;
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.project-tech-stack span {
+  background-color: #00bfff;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.project-links {
+  display: flex;
+  margin-top: auto; /* Pushes links to the bottom */
+  justify-content: center; /* Center the single button */
+  width: 100%; /* Ensure links container takes full width for button */
+}
+
+.project-link {
+  display: inline-block;
+  background-color: #001f4d;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+  width: 100%; /* Make the button take the full width of its parent */
+  text-align: center; /* Center the text within the button */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.project-link:hover {
+  background-color: #00bfff;
+  transform: translateY(-2px);
+}
+
+/* Responsive styles */
+
+/* For medium screens (e.g., larger tablets, small laptops), switch to 2 columns */
+@media (max-width: 1100px) { /* Adjust this breakpoint as needed after testing */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* For small screens (e.g., mobile phones), stack vertically */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 40px 0;
+  }
+  .projects-container {
+    padding: 0 2.5%;
+    align-items: center;
+  }
+  .projects-heading {
+    align-self: center;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr; /* Stack projects vertically on small screens */
+    gap: 20px;
+  }
+  .project-card {
+    padding: 20px;
+    min-height: 280px;
+    width: 95%; /* Take up most of the width, leave some margin */
+    margin: 0 auto; /* Center the card */
+    overflow: visible; /* Allow content to push height when stacked */
+  }
+  /* Resetting absolute positioning and related properties for stacked cards */
+  .project-card > * {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    overflow: visible;
+  }
+  .project-card h3 {
+    font-size: 1.4rem;
+  }
+  .project-year {
+    font-size: 0.8rem;
+  }
+  .project-description-list {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .project-tech-stack span {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+  .project-links {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+    align-items: center; /* Center stacked buttons */
+  }
+  .project-link {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    width: 80%; /* Adjusted for better fit on small screens */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 0 1%;
+  }
+  .project-card {
+    padding: 15px;
+    min-height: 250px;
+  }
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+  .project-description-list {
+    font-size: 0.85rem;
+  }
+  .project-tech-stack span {
+    font-size: 0.7rem;
+  }
+  .project-link {
+    font-size: 0.85rem;
+    padding: 7px 12px;
+    width: 90%; /* Further adjustment for very small screens */
+  }
+}

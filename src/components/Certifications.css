@@ -1,0 +1,187 @@
+/* src/components/Certifications.css */
+
+.certifications-section {
+  background-color: #f8f8f8; /* Light grey background, consistent with other sections */
+  padding: 60px 0;
+  color: #333;
+}
+
+.certifications-container {
+  width: 100%;
+  max-width: 800px; /* Adjust max-width as needed for single card layout */
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align contents to the left */
+}
+
+/* Reusing heading-box styles */
+.certifications-container .heading-box {
+  border: 2px solid #00bfff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  text-align: center;
+  align-self: flex-start; /* Aligns heading to the left */
+  margin-left: 0;
+}
+
+.certification-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: 100%; /* Take full width of its container */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.certification-card h3 {
+  font-size: 1.8rem;
+  color: #001f4d;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #a7d9ed;
+  padding-bottom: 8px;
+}
+
+.certification-issuer,
+.certification-duration,
+.certification-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 8px; /* Spacing for text lines */
+}
+
+.certification-skills h4 {
+  font-size: 1.2rem;
+  color: #001f4d;
+  margin-bottom: 10px;
+}
+
+.skills-list {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow skills to wrap to next line */
+  gap: 15px 25px; /* Row and column gap for skill items */
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  color: #00bfff; /* Icon color */
+  margin-right: 10px;
+}
+
+.certification-actions {
+  margin-top: 20px;
+  text-align: center; /* Center the button */
+}
+
+.certification-button {
+  display: inline-block;
+  background-color: #001f4d; /* Dark blue button */
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: auto; /* Allow button to size based on content */
+  white-space: nowrap;
+}
+
+.certification-button:hover {
+  background-color: #00bfff; /* Lighter blue on hover */
+  transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 40px 0;
+  }
+  .certifications-container {
+    padding: 0 2.5%;
+    align-items: center; /* Center content on small screens */
+  }
+  .certifications-heading {
+    align-self: center; /* Center heading on small screens */
+  }
+  .certification-card {
+    padding: 20px;
+  }
+  .certification-card h3 {
+    font-size: 1.5rem;
+  }
+  .certification-issuer,
+  .certification-duration,
+  .certification-description {
+    font-size: 0.95rem;
+  }
+  .certification-skills h4 {
+    font-size: 1.1rem;
+  }
+  .skills-list {
+    gap: 10px 20px; /* Reduced gap for smaller screens */
+    justify-content: center; /* Center skills on smaller screens */
+  }
+  .skills-list li {
+    font-size: 1rem;
+  }
+  .skill-icon {
+    font-size: 1.3rem;
+  }
+  .certification-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    width: 80%; /* Make button wider on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .certifications-container {
+    padding: 0 1%;
+  }
+  .certification-card {
+    padding: 15px;
+  }
+  .certification-card h3 {
+    font-size: 1.3rem;
+  }
+  .certification-issuer,
+  .certification-duration,
+  .certification-description {
+    font-size: 0.9rem;
+  }
+  .certification-skills h4 {
+    font-size: 1rem;
+  }
+  .skills-list {
+    gap: 8px 15px;
+  }
+  .skills-list li {
+    font-size: 0.9rem;
+  }
+  .skill-icon {
+    font-size: 1.2rem;
+  }
+  .certification-button {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+    width: 90%;
+  }
+}

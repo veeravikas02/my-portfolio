@@ -1,0 +1,18 @@
+/* src/components/Footer.css */
+
+.footer-section {
+  background-color: #001f4d; /* Dark blue, consistent with header */
+  color: #ffffff; /* White text */
+  text-align: center;
+  padding: 25px 20px; /* Vertical and horizontal padding */
+  font-size: 0.95rem;
+  margin-top: 50px; /* Add some space above the footer */
+}
+
+/* Basic responsiveness, though a simple footer usually scales well */
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 20px 15px;
+    font-size: 0.85rem;
+  }
+}

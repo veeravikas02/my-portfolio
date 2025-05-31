@@ -1,0 +1,23 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff; /* White background */
+  font-family: Arial, sans-serif;
+  color: #000000; /* Black text */
+  line-height: 1.6;
+}
+
+/* Main heading style */
+h1 {
+  background-color: #001f4d; /* Navy Blue background */
+  color: #00bfff; /* Light Blue text */
+  text-align: center;
+  padding: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}

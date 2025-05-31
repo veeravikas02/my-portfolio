@@ -1,0 +1,188 @@
+/* src/components/Contact.css */
+
+.contact-section {
+  background-color: #ffffff; /* White background */
+  padding: 60px 0;
+  color: #333;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 900px; /* Adjust max-width as needed */
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align contents to the left */
+}
+
+/* Reusing heading-box styles */
+.contact-container .heading-box {
+  border: 2px solid #00bfff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  text-align: center;
+  align-self: flex-start; /* Aligns heading to the left */
+  margin-left: 0;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 30px; /* Space between each contact item */
+  width: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center; /* Vertically align icon and text */
+  gap: 20px; /* Space between icon box and info */
+  background-color: #f8f8f8; /* Light background for each item */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.contact-icon-box {
+  background-color: #e6f7ff; /* Lighter blue for icon background */
+  border-radius: 50%; /* Circular background for icon */
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Prevent icon box from shrinking */
+}
+
+.contact-icon {
+  font-size: 2.2rem; /* Icon size */
+  color: #00bfff; /* Blue icon color */
+}
+
+.contact-info {
+  flex-grow: 1; /* Allow info to take remaining space */
+}
+
+.contact-info h4 {
+  font-size: 1.3rem;
+  color: #001f4d; /* Dark blue heading */
+  margin-bottom: 5px;
+}
+
+.contact-link {
+  font-size: 1.1rem;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #00bfff; /* Blue on hover */
+}
+
+/* Telegram Button specific styles */
+.telegram-button { /* Changed class from .linkedin-button */
+  display: inline-flex;
+  align-items: center;
+  background-color: #0088cc; /* Telegram blue color */
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.telegram-button .button-icon {
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+
+.telegram-button:hover {
+  background-color: #0077b3; /* Darker Telegram blue on hover */
+  transform: translateY(-2px);
+}
+
+
+/* Responsive styles (already present, ensured they apply correctly) */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 0;
+  }
+  .contact-container {
+    padding: 0 2.5%;
+    align-items: center;
+  }
+  .contact-heading {
+    align-self: center;
+  }
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  .contact-icon-box {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .contact-icon {
+    font-size: 2rem;
+  }
+  .contact-info h4 {
+    font-size: 1.2rem;
+  }
+  .contact-link {
+    font-size: 1rem;
+  }
+  .telegram-button { /* Changed class */
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: 80%;
+    justify-content: center;
+  }
+  .telegram-button .button-icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 0 1%;
+  }
+  .contact-item {
+    padding: 10px;
+  }
+  .contact-icon-box {
+    padding: 8px;
+  }
+  .contact-icon {
+    font-size: 1.8rem;
+  }
+  .contact-info h4 {
+    font-size: 1.1rem;
+  }
+  .contact-link {
+    font-size: 0.95rem;
+  }
+  .telegram-button { /* Changed class */
+    font-size: 0.95rem;
+    padding: 8px 15px;
+    width: 90%;
+  }
+  .telegram-button .button-icon {
+    font-size: 1.1rem;
+    margin-right: 6px;
+  }
+}

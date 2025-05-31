@@ -1,0 +1,206 @@
+/* src/components/About.css */
+
+.about-section {
+  background-color: #f8f8f8; /* Light gray background to distinguish it */
+  color: #333; /* Darker text for readability */
+  min-height: auto; /* No fixed min-height needed if content fills it */
+  display: flex;
+  justify-content: center; /* Center content horizontally within the section */
+  align-items: flex-start; /* Align content to the top of the section */
+  margin-left: px;
+}
+
+.about-container {
+  display: flex;
+  width: 100%;
+  /* Removed max-width to allow the content box to expand more */
+}
+
+.about-me-box {
+  background-color: #ffffff; /* White background for the main content box */
+  border-radius: 10px;
+  padding: 40px; /* Internal padding for content */
+  width: 100%; /* Take full width within its flex container */
+  /* Removed max-width and margins to allow it to stretch horizontally */
+  display: flex; /* Use flexbox for internal layout (title, description, education) */
+  flex-direction: column; /* Stack content vertically */
+  align-items: flex-start; /* Align items to the left within the box */
+}
+
+/* New style for the box around headings */
+.heading-box {
+  border: 2px solid #00bfff; /* Light blue border */
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #f0f8ff; /* Lightest blue background */
+  display: inline-block; /* Makes the box wrap around the text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  margin-bottom: 25px; /* Spacing below the heading box */
+}
+
+.about-me-box h2 {
+  font-size: 2.5rem;
+  color: #001f4d; /* Navy blue for the heading */
+  /* Margin-bottom, padding, border are now handled by .heading-box class */
+  text-align: left;
+  /* Removed width: 100% as display: inline-block handles it */
+}
+
+.about-description {
+  margin-bottom: 30px; /* Space below description */
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  text-align: left; /* Ensure description is left-aligned */
+}
+
+.about-description p {
+  margin-bottom: 15px; /* Space between paragraphs */
+}
+
+.education-section {
+  width: 100%; /* Ensure education section takes full width inside the box */
+  margin-bottom: 30px; /* Space before resume button */
+}
+
+.education-section h3 {
+  font-size: 1.8rem;
+  color: #001f4d; /* Navy blue for education heading */
+  /* Margin-bottom, border-bottom, padding-bottom are now handled by .heading-box class */
+  text-align: left;
+}
+
+.education-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+  gap: 25px; /* Space between education cards */
+  justify-content: flex-start; /* Align cards to the left */
+}
+
+.education-card {
+  background-color: #e0f2f7; /* Light blue background for cards */
+  border: 1px solid #00bfff; /* Light blue border */
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1; /* Allow cards to grow and shrink */
+  min-width: 280px; /* Minimum width for cards before wrapping */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text content to left within card */
+}
+
+.degree-name {
+  font-size: 1.3rem;
+  color: #001f4d; /* Navy blue for degree name */
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #a7d9ed; /* Subtle border under degree name */
+  width: 100%;
+}
+
+.college-info,
+.year-info,
+.grade-info {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+  display: flex; /* For image and text alignment */
+  align-items: center;
+  gap: 8px; /* Space between label and value */
+}
+
+.college-logo { /* Style for the college image */
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+  object-fit: contain;
+  margin-right: 0px; /* Adjusted to remove space before label */
+  vertical-align: middle; /* Align image nicely with text */
+}
+
+.resume-download {
+  width: 100%;
+  text-align: center; /* Center the button */
+  margin-top: 30px;
+}
+
+.resume-button {
+  background-color: #00bfff; /* Light blue button */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block; /* Allows padding and transitions */
+  border: none; /* Remove default button border if it were a <button> */
+  cursor: pointer;
+}
+
+.resume-button:hover {
+  background-color: #008cc4; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .about-me-box {
+    max-width: 100%; /* Allow box to take full width on smaller screens */
+    margin-right: 0;
+  }
+
+  .education-grid {
+    flex-direction: column; /* Stack education cards vertically */
+    gap: 15px;
+  }
+
+  .education-card {
+    min-width: unset; /* Remove min-width to allow full width */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 0px; /* Adjusted padding for smaller screens */
+  }
+
+  .about-me-box {
+    padding: 25px;
+  }
+
+  .about-me-box h2 {
+    font-size: 2rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .education-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .degree-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-me-box {
+    padding: 20px;
+  }
+
+  .education-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .resume-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}

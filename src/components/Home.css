@@ -1,0 +1,120 @@
+/* src/components/Home.css */
+.home-section {
+  background-color: white;
+  padding: 80px 5% 60px 5%; /* Top padding for fixed header, 5% horizontal, 60px bottom for consistent gap */
+  color: black;
+  /* Add minimum height to make the section larger */
+  min-height: calc(100vh - 80px); /* 100% viewport height minus header height */
+  display: flex; /* Use flexbox to center content vertically */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 250px; /* Add some space between image and content */
+}
+
+.profile-img {
+  width: 300px; /* Slightly increased size for impact */
+  height: 350px; /* Slightly increased size for impact */
+  object-fit: cover;
+  border-radius: 5%;
+  border: 5px solid #00bfff; /* Added a light blue border */
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.5); /* Added a subtle glowing shadow */
+}
+
+.home-content-wrapper { /* New style for the wrapper */
+  display: flex;
+  flex-direction: column; /* Stack title and social vertically */
+  align-items: center; /* Center items horizontally within this wrapper */
+  background-color: #f0f8ff; /* Lightest blue background for the container */
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  max-width: 400px; /* Limit width for better appearance */
+  text-align: center; /* Ensure text is centered */
+}
+
+.home-text h1 {
+  font-size: 2.8rem; /* Increased font size for prominence */
+  background-color: #001f4d; /* Navy Blue background */
+  color: #00bfff; /* Light Blue text */
+  padding: 15px 25px; /* Increased padding */
+  border-radius: 8px;
+  margin-bottom: 20px; /* Space between title and social icons */
+  display: inline-block; /* Helps with padding and background fitting content */
+}
+
+.social-media {
+  margin-top: 0; /* No need for margin-top as it's now controlled by h1's margin-bottom */
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Increased gap between icons */
+}
+
+.social-media a {
+  color: #001f4d; /* Changed social icon color to navy for contrast */
+  font-size: 2.5rem; /* Increased icon size */
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+}
+
+.social-media a:hover {
+  color: #00bfff; /* Light blue on hover */
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .home-section {
+    padding: 60px 10px; /* Adjusted padding for smaller screens */
+    min-height: calc(100vh - 60px); /* Adjust min-height for smaller header */
+  }
+
+  .home-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .home-content-wrapper {
+    padding: 20px;
+    max-width: 90%; /* Adjust max-width for smaller screens */
+  }
+
+  .home-text h1 {
+    font-size: 2rem; /* Adjusted font size */
+    padding: 10px 15px;
+    margin-bottom: 15px;
+  }
+
+  .social-media {
+    gap: 20px; /* Adjusted gap */
+  }
+
+  .social-media a {
+    font-size: 2rem; /* Adjusted icon size */
+  }
+}
+
+/* Added a very small screen adjustment if needed */
+@media (max-width: 480px) {
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+  .home-text h1 {
+    font-size: 1.6rem;
+    padding: 8px 12px;
+  }
+  .social-media a {
+    font-size: 1.8rem;
+  }
+}
