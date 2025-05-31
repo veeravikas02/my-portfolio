@@ -14,9 +14,9 @@ const Home = () => {
             <h1>Bachelor Of Engineering</h1>
           </div>
           <div className="social-media">
-            <a href="https://www.facebook.com/veeravikas.gudise?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+            <a href="https://www.facebook.com/Veeravikas02?mibextid=wwXIfr&mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
             <a href="https://www.linkedin.com/in/gudise-veera-vikas-627383254/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-            <a href="https://www.instagram.com/vikki_2_vikki/?igsh=ZndjcTEyOGk5cXdn&utm_source=qr#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://www.instagram.com/veeravikas02?igsh=ZndjcTEyOGk5cXdn&utm_source=qr" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
             <a href="https://github.com/veeravikas02" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
             <a href="https://x.com/vikasvi39098182?s=11" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
           </div>
